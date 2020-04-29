@@ -28,7 +28,7 @@ export class DataService {
 
   }
 
-  public addCharacter(name: string, nickname: string, birthday: string, img: string, status: string): void {
+  public addCharacter(name: string, nickname: string, birthday: Date, img: string, status: string): void {
     let character = new Character(this.nextId,name,nickname,birthday,img,status);
     let characters = this.getCharcacters();
     characters.push(character);
@@ -46,6 +46,23 @@ export class DataService {
     let characters = this.getCharcacters();
     characters = characters.filter((character) => character.id != id);
     this.setLocalStorageCharacters(characters);
+  }
+
+  public updateCharacter(id: number,character:Character): void {
+    let characters = this.getCharcacters();
+    characters = characters.filter((character) => character.id != id);
+    characters.push(character);
+    this.setLocalStorageCharacters(characters);
+  }
+
+  public findByIdCharacter(id: number): Character {
+    const characters = this.getCharcacters();
+    for (const character of characters) {
+      if (character.id == id) {
+        return character;
+      }
+    }
+    return undefined;
   }
 
   private setLocalStorageCharacters(characters: Character[]): void {

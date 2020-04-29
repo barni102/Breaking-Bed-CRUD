@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 
 
@@ -11,12 +12,13 @@ import { DataService } from '../services/data.service';
 export class ListComponent implements OnInit {
   characters = [];
 
-  constructor(private service: DataService) { }
+  constructor(private service: DataService, private router: Router) { }
 
   ngOnInit(): void {
-        this.refresh();
+      
       
       this.characters = this.service.getCharcacters();
+
   }
   removeCharacter(id : number): void {
     this.service.removeCharacter(id)
@@ -24,6 +26,9 @@ export class ListComponent implements OnInit {
 
   refresh(): void {
     window.location.reload();
+  }
+  goToDetails(charactersId: number){
+    this.router.navigate(["details/",charactersId]);
   }
 
 }

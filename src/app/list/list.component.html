@@ -1,4 +1,5 @@
- <table class="table table-striped">
+
+<table class="table table-striped">
    <thead>
      <tr>
        <td>ID</td>
@@ -14,8 +15,8 @@
        <td>{{character.birthday}}</td>
        <td>{{character.status}}</td>
        <td>
-         <button>Details</button>
-           <button class="removeCharacter" (click)="removeCharacter(character.id)" (click)="refresh()">remove</button>
+         <button (click)="goToDetails(character.id)">Details</button>
+           <button (click)="removeCharacter(character.id)" (click)="refresh()">remove</button>
        </td>
      </tr>
    </tbody>
