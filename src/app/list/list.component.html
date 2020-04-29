@@ -1,0 +1,22 @@
+ <table class="table table-striped">
+   <thead>
+     <tr>
+       <td>ID</td>
+       <td>Name</td>
+       <td>Birth date</td>
+       <td>Status</td>
+     </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor="let character of characters;">
+       <td>{{character.id}}</td>
+       <td>{{character.name}}</td>
+       <td>{{character.birthday}}</td>
+       <td>{{character.status}}</td>
+       <td>
+         <button>Details</button>
+           <button class="removeCharacter" (click)="removeCharacter(character.id)" (click)="refresh()">remove</button>
+       </td>
+     </tr>
+   </tbody>
+ </table>
