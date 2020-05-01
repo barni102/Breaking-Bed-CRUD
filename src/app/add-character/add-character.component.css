@@ -1,0 +1,12 @@
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+button {
+  margin-right: 15px;
+}

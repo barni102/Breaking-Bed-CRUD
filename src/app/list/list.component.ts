@@ -30,5 +30,8 @@ export class ListComponent implements OnInit {
   goToDetails(charactersId: number){
     this.router.navigate(["details/",charactersId]);
   }
+  addNew(){
+    this.router.navigate(["add"]);
+  }
 
 }

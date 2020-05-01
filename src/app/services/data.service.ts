@@ -64,6 +64,7 @@ export class DataService {
   }
 
   private setLocalStorageCharacters(characters: Character[]): void {
+    characters.sort((a, b) => (a.id > b.id) ? 1 : -1)
     localStorage.setItem('characters', JSON.stringify({ characters: characters }));
   }
 

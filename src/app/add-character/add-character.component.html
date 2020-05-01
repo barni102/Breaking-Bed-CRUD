@@ -1,0 +1,38 @@
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <form novalidate ngForm="#f">
+
+      <div class="form-group">
+        <label for="src">Img src</label>
+        <input type="text" name="Img src " class="form-control" id="src" [(ngModel)]="img">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" id="name" [(ngModel)]="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nickname">Nickname</label>
+        <input type="text" name="nickname" class="form-control" id="nickname" [(ngModel)]="nickname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" name="status" class="form-control" id="status" [(ngModel)]="status" required>
+      </div>
+
+      <div class="form-group">
+        <label for="birthday">Birthday</label>
+          <input type="date" name="birthday" datetime="MM-dd-yyyy" class="form-control" id="birthday"
+            [ngModel]="birthday | date:'yyyy-MM-dd'" (ngModelChange)="birthday = $event">
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary" (click)="add()" (click)="back()">Add</button>
+        <button class="btn btn-primary" (click)="back()">Cancel</button>
+      </div>
+    </form>
+
+  </div>
+</div>

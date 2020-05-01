@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthguardGuard } from './authguard.guard';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AddCharacterComponent } from './add-character/add-character.component';
 
 
 
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     DetailsComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AddCharacterComponent
   ],
   imports: [
     BrowserModule,
