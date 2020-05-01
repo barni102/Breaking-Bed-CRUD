@@ -23,6 +23,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  navigateList (): void {
+    this.router.navigate(["list"])
+  }
+
 
 
 }
