@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { AuthguardGuard } from './authguard.guard';
 
 
 
@@ -15,7 +17,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     ListComponent,
-    DetailsComponent
+    DetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -22,8 +22,6 @@ export class DataService {
         let maxId = characters[characters.length - 1].id;
         this.nextId = maxId + 1;
     }
- 
-    
 
 
   }
