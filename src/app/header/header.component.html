@@ -1,0 +1,15 @@
+<header>
+<nav class="navbar navbar-fixed-top navbar-dark bg-dark">
+  <a class="navbar-brand">Breaking Bed CRUD app</a>
+
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a routerLink="list">List</a>
+    </li>
+
+  </ul>
+ <button class="btn btn-lg btn-primary" type="submit" *ngIf="loggedIn()" (click)="logOut()">Logout</button>
+    
+
+</nav>
+</header>
