@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Character } from '../models/character.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../services/data.service';
@@ -9,7 +9,7 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  character :Character;
+   character :Character;
 
   constructor(private activatedRoute: ActivatedRoute, private service: DataService, private router: Router) { 
   
@@ -25,7 +25,8 @@ export class DetailsComponent implements OnInit {
     }
 
     back (): void {
-      this.router.navigate([""]);
+      this.router.navigate(["list"]);
     }
+    
 
 }

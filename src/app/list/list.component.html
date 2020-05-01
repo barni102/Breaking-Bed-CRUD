@@ -6,6 +6,9 @@
        <td>Name</td>
        <td>Birth date</td>
        <td>Status</td>
+       <td>
+       <button class="btn btn-primary">Add new</button>
+       </td>
      </tr>
    </thead>
    <tbody>
@@ -15,8 +18,9 @@
        <td>{{character.birthday}}</td>
        <td>{{character.status}}</td>
        <td>
-         <button (click)="goToDetails(character.id)">Details</button>
-           <button (click)="removeCharacter(character.id)" (click)="refresh()">remove</button>
+         <button class="btn btn-primary" (click)="goToDetails(character.id)">Details</button>
+           <button class="btn btn-primary" (click)="removeCharacter(character.id)"
+             (click)="refresh()">remove</button>
        </td>
      </tr>
    </tbody>
