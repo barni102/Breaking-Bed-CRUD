@@ -1,8 +1,9 @@
 div {
-    color: #fff;
+  color: #fff;
 }
-footer{
-    position: absolute;
+footer {
+  position: fixed;
   bottom: 0;
   width: 100%;
+  text-align: center;
 }
